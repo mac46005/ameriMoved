@@ -16,6 +16,7 @@
         :root {
             --color-primary: #769d27;
             --color-secondary: #ffe942;
+            --color-card: rgb(228, 228, 48);
         }
 
         body {
@@ -100,6 +101,14 @@
             background: var(--color-primary);
             text-align: center;
         }
+
+        div.card{
+            background: var(--color-card);
+            padding: 1em;
+        }
+        div.card img{
+            width: 100%;
+        }
         
     </style>
 </head>
@@ -158,14 +167,32 @@
                     <h2>Services</h2>
                 </header>
                 <p>
-                    Here are the services we provide.
+                    Find the right services for the job.
+                </p>
+                <p>
+                    AmeriMove offers a wide variety of moving services. We are capable of adapting to your needs to get the job done. Below is a list of services we offer.
                 </p>
                 <div class="rows just-spArnd">
-                    <div class="card">
+                    <div class="card col-2">
                         <figure>
-                            <img src="" alt="">
+                            <img src="./img/famPackVeh.jpg" alt="LMTV">
+                            <caption><acronym title="Light Medium Tactical Vehicle">LMTV</acronym></caption>
                         </figure>
                         <h3>Single Family Package</h3>
+                        <p>Economic moving package for single famailies.</p>
+                    </div>
+                    <div class="card col-2">
+                        <figure>
+                            <img src="./img/bus.jpg" alt="Military Bus">
+                            <caption>
+                                Personnel Carrier
+                            </caption>
+                            <h3>Bus Loads</h3>
+                            <p>
+                                Not only can we move items we can also move bus loads of people.
+                            </p>
+
+                        </figure>
                     </div>
                 </div>
             </section>

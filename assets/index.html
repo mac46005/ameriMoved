@@ -14,9 +14,10 @@
         }
 
         :root {
-            --color-primary: #7fb01e;
-            --color-secondary: #dac523;
+            --color-primary: #649307;
+            --color-secondary: #a49628;
             --color-card: rgb(228, 228, 48);
+            --color-nav: #494949;
         }
 
         body {
@@ -80,29 +81,34 @@
         /* myStyles */
         #banner {
             width: 100%;
-            min-height: 600px;
+            height: 100vh;
             background: var(--color-primary) url(./img/Banner.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
 
-        @media (min-width: 400px){
-            #banner{
-                min-height: 300px;
-            }
-        }
+        
         .navigation{
-            background: darkgrey;
+            background: var(--color-nav);
 
         }
         .navigation ul{
             list-style: none;
+
         }
         .navigation ul li{
             padding: 1em 1em;
             display: inline-block;
         }
 
+        .navigation ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navigation ul li:hover{
+            color: var(--color-primary);
+            background: white;
+        }
         main{
             background: var(--color-secondary)
         }
@@ -115,11 +121,23 @@
         div.card{
             background: var(--color-card);
             padding: 1em;
+            border-radius: 1em;
         }
         div.card img{
             width: 100%;
         }
-        
+
+
+
+        @media (max-width: 400px){
+            #banner
+            .navigation{
+                height: 100%;
+            }
+            .navigation ul li{
+                display: block;
+            }
+        }
     </style>
 </head>
 

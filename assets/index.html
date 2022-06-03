@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,49 +12,187 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        :root {
+            --color-primary: #769d27;
+            --color-secondary: #ffe942;
+        }
+
+        body {
             margin: 0;
         }
 
-        /* Layout */
-        .container{
-            width: 80%;
+        img {
+            width: 100%;
         }
-        .columns{
+
+        /* Layout */
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .columns {
             display: flex;
             flex-direction: column;
         }
-        .rows{
+
+        .rows {
             display: flex;
             flex-direction: row;
         }
-        .just-spBet{
+
+        .just-spBet {
             justify-content: space-between;
         }
-        .just-spEven{
+
+        .just-spEven {
             justify-content: space-evenly;
         }
-        .just-spArnd{
+
+        .just-spArnd {
             justify-content: space-around;
         }
 
-        .col-1{
+        .col-1 {
             flex-basis: 24%;
         }
-        .col-2{
+
+        .col-2 {
             flex-basis: 47%;
         }
-        .col-3{
+
+        .col-3 {
             flex-basis: 73%;
         }
-        .col-4{
+
+        .col-4 {
             flex-basis: 97%;
         }
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+
+
+
+
+        /* myStyles */
+        #banner {
+            width: 100%;
+            background: var(--color-primary) url(./img/Banner.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .btn {
+            padding: 1em;
+            border-radius: 1em;
+        }
+
+        .btn-primary {
+            background: var(--color-primary)
+        }
+
+        main{
+            background: var(--color-secondary)
+        }
+        main header{
+            padding: 1em 0;
+            background: var(--color-primary);
+            text-align: center;
+        }
+        
     </style>
 </head>
-<body>
-    <header id="banner">
 
+<body>
+    <header id="banner" class="columns">
+        <div class="container rows just-spBet">
+            <div>
+                <img src="./img/AmeriMove_Logo.png" alt="">
+            </div>
+            <div>
+                <h2>Something</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, laboriosam.
+                </p>
+                <p><a href="#">Our Services</a></p>
+            </div>
+        </div>
+
+
+
+
+        <div >
+            <nav class="container">
+                <ul>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#ContactUs">ContactUs</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
+
+
+    <main>
+        <div class="container">
+            <section>
+                <header>
+                    <h2>About Us</h2>
+                </header>
+                <div class="columns">
+                    <div>
+                        <img src="./img/AmeriMove_Logo.png" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repellat perferendis consequatur odio. Explicabo repellat ab quaerat aliquid harum similique. Quasi, esse quaerat necessitatibus quisquam hic doloribus repellendus ducimus at?
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <header>
+                    <h2>Services</h2>
+                </header>
+                <p>
+                    Here are the services we provide.
+                </p>
+                <div class="rows just-spArnd">
+                    <div class="card">
+                        <figure>
+                            <img src="" alt="">
+                        </figure>
+                        <h3>Single Family Package</h3>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <header>
+                    <h2>Contact Us</h2>
+                </header>
+                <p>
+                    Please fill out the form below and we will contact you as soon as possible.
+                </p>
+                <form action="">
+                    <label for="">Full Name: <input type="text" name="fullName" id="" placeholder="Bob Smith"></label>
+                    <label for="">Phonenumber: <input type="tel" name="phoneNumber" id="" placeholder="333-333-3333"></label>
+                    <label for="">Email: <input type="email" name="email" id="" placeholder="mymail@mail.com"></label>
+                    
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 </body>
+
 </html>

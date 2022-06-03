@@ -14,8 +14,8 @@
         }
 
         :root {
-            --color-primary: #769d27;
-            --color-secondary: #ffe942;
+            --color-primary: #7fb01e;
+            --color-secondary: #dac523;
             --color-card: rgb(228, 228, 48);
         }
 
@@ -80,17 +80,27 @@
         /* myStyles */
         #banner {
             width: 100%;
+            min-height: 600px;
             background: var(--color-primary) url(./img/Banner.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
-        .btn {
-            padding: 1em;
-            border-radius: 1em;
-        }
 
-        .btn-primary {
-            background: var(--color-primary)
+        @media (min-width: 400px){
+            #banner{
+                min-height: 300px;
+            }
+        }
+        .navigation{
+            background: darkgrey;
+
+        }
+        .navigation ul{
+            list-style: none;
+        }
+        .navigation ul li{
+            padding: 1em 1em;
+            display: inline-block;
         }
 
         main{
@@ -114,13 +124,13 @@
 </head>
 
 <body>
-    <header id="banner" class="columns">
+    <header id="banner" class="columns just-spBet">
         <div class="container rows just-spBet">
             <div>
                 <img src="./img/AmeriMove_Logo.png" alt="">
             </div>
             <div>
-                <h2>Something</h2>
+                <h2>Ready for action, anytime, worldwide!</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, laboriosam.
                 </p>
@@ -131,7 +141,7 @@
 
 
 
-        <div >
+        <div class="navigation">
             <nav class="container">
                 <ul>
                     <li><a href="#aboutUs">About Us</a></li>
@@ -146,7 +156,7 @@
 
     <main>
         <div class="container">
-            <section>
+            <section id="aboutUs">
                 <header>
                     <h2>About Us</h2>
                 </header>
@@ -162,7 +172,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="Services">
                 <header>
                     <h2>Services</h2>
                 </header>
@@ -198,7 +208,7 @@
             </section>
 
 
-            <section>
+            <section id="ContactUs">
                 <header>
                     <h2>Contact Us</h2>
                 </header>

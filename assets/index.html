@@ -74,7 +74,6 @@
             flex-basis: 50%;
         }
         col-3{
-            flex-basis: 75%;
         }
         col-4{
             flex-basis: 100%;
@@ -85,7 +84,9 @@
         
         */
 
-
+        .hidden{
+            display: none
+        }
 
         .mainContainer{
             display: flex;
@@ -96,19 +97,35 @@
             width: 50%;
             position: relative;
         }
-
+        @media screen and (max-width: 700px) {
+            .half{
+                width: 100%;
+                position: static;
+            }
+            .mainContainer{
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+                height: 100vh;
+            }
+            
+        }
 
 
         .mainContent{
             height: 100%;
-            display: flex;
-            justify-content: center;
+        }
+        @media screen and (max-width: 700px) {
+            .mainContent{
+                max-height: 50%;
+            }
         }
         .mainContent > div{
             width: 80%;
+            margin: 0 auto;
         }
         .mainContent div .logo{
-            margin: 4rem 0;
+            margin-top: 1em;
+            margin-bottom: 2em;
         }
         .mainContent div img{
             width: 100%
@@ -140,6 +157,11 @@
             background: url(../content/images/ps/lmtv_qrtTurn.png);
             background-size: cover;
         }
+        @media screen and (max-width: 700px) {
+            .banner{
+                height: 10%;
+            }
+        }
         .banner nav{
             position: absolute;
             right: 0;
@@ -153,12 +175,16 @@
             font-weight: 900;
             margin: 0 1rem;
         }
+        .banner nav a:hover,.banner nav a:focus{
+            padding-bottom: 5px;
+            border-bottom: 3px solid gold;
+        }
     </style>
 <body>
     <div class="mainContainer">
         <main class="half">
             <div class="mainContent">
-                <div>
+                <div id="home">
                     <p class="logo">
                         <img src="./img/AmeriMove_Logo.png" alt="">
                     </p>
@@ -169,10 +195,16 @@
                         Moving you is our top priority. No matter where you are <span id="Ameri">Ameri</span><span id="Move">Move</span> will ensure a quick and safe move to your location under any cicumstances. <span id="Ameri">Ameri</span><span id="Move">Move</span> offers a variety of moving services that fits your needs.
                     </p>
                     <a href="#" class="btn">More Info</a>
-                    <footer>
-
-                    </footer>
                 </div>
+                <!-- <div id="services" class="hidden">
+
+                </div>
+                <div class="about" class="hidden">
+
+                </div>
+                <div class="contact" class="hidden">
+
+                </div> -->
             </div>
         </main>
 
@@ -182,7 +214,6 @@
 
 
         <header class="half">
-
             <div class="banner">
                 <nav>
                     <ul>
@@ -193,6 +224,8 @@
                 </nav>
             </div>
         </header>
+
+
     </div>
 </body>
 </html>

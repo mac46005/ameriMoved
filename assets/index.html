@@ -7,49 +7,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AmeriMove Brochure</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        :root{
+
+        :root {
             --color-primary: rgb(50, 50, 50);
             --color-secondary: gold;
             --color-text: #efefef;
         }
-        body{
+
+        body {
             font-size: 16px;
             background-color: var(--color-primary);
             color: var(--color-text);
             height: 100vh;
         }
 
-        header nav ul{
+
+
+
+
+
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+
+
+        /*
+        
+        BANNER
+
+        */
+
+        header#banner {
+            width: 50%;
+            position: relative;
+        }
+        header#banner .b-img{
+            position: absolute;
+            
+        }
+        header#banner nav{
+            position: absolute;
+            right: 0;
+        }
+        header#banner nav ul {
             list-style: none;
         }
-        header nav ul li a{
+
+        header#banner nav ul li a {
             text-decoration: none;
             color: var(--color-secondary);
             font-weight: 900;
         }
 
-        .main-container{
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
+
+
+
+
+
+        /*
+
+        MAIN-CONTENT 
+        
+        */
+        .main-content {
+            position: relative;
+            width: fit-content;
         }
 
-        .main-content{
-            position: relative;
-        }
-        .content-item{
+        .content-item {
             position: absolute;
         }
+
+        .hidden {
+            display: none;
+        }
+
+
+
     </style>
+
 <body>
     <div class="main-container">
         <header id="banner">
-            <div class="logo">
+            <img class="b-img" src="../content/images/ps/lmtv_qrtTurn.png" alt="">
+            <div class="logo" >
 
             </div>
             <nav>
@@ -64,19 +116,27 @@
 
 
         <main id="main-content">
-            <div id="home" class="content-item">
+            
+            <div id="home" class="content-item" style="color: green;">
                 <h1>home</h1>
             </div>
-            <div id="services" class="content-item">
+            <div id="services" class="content-item" style="color: red;">
                 <h1>services</h1>
             </div>
-            <div id="about" class="content-item">
+            <div id="about" class="content-item" style="color: purple">
                 <h1>about</h1>
             </div>
-            <div id="contact" class="content-item">
+            <div id="contact" class="content-item" style="color: blue;">
                 <h1>contact</h1>
             </div>
-        </section>
+            </section>
+
+
+
+
+
+
     </div>
 </body>
+
 </html>

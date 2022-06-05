@@ -1,16 +1,18 @@
-var elmainContent = document.querySelector(".main-content");
-var elContentItems = document.querySelectorAll(".content-item");
-var elNavBtn = document.querySelectorAll(".nav-btn");
+var Content = document.querySelector(".main-content");
+var contentItems = document.querySelectorAll(".content-item");
+var navBtns = document.querySelectorAll(".nav-btn");
 
-function navSelected() {
-  for (let i = 0; i < elNavBtn.length; i++) {
-    elNavBtn[i].addEventListener('click',function() {
-      let currentBtn = document.querySelectorAll(".selected");
-      currentBtn[0].classList.remove('selected');
 
-      this.className += " selected";
-    });
-  }
+// Think about a way to transition the element by applying opacity
+function pageTransition(){
+    for (let i = 0; i < navBtns.length; i++) {
+        navBtns[i].addEventListener('click',function(){
+            var currentBtn = document.querySelectorAll('.selected');
+            currentBtn[0].classList.replace('selected','');
+            this.className += 'selected';
+        })
+        
+    }
 }
 
-navSelected();
+pageTransition();

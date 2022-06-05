@@ -6,8 +6,7 @@ function navSelected() {
   for (let i = 0; i < elNavBtn.length; i++) {
     elNavBtn[i].addEventListener('click',function() {
       let currentBtn = document.querySelectorAll(".selected");
-    //   currentBtn[0].classList.replace('selected','');
-currentBtn[0].classList.replace('selected','');
+      currentBtn[0].classList.remove('selected');
 
       this.className += " selected";
     });

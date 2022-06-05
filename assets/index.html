@@ -64,16 +64,17 @@
             list-style: none;
         }
 
-        header#banner nav ul li a {
+        header#banner nav ul li{
             text-decoration: none;
             color: var(--color-secondary);
             font-weight: 900;
         }
-
-
-
-
-
+        header#banner nav ul li .selected{
+            border-bottom: 3px solid var(--color-secondary);
+        }
+        header#banner nav ul li:hover, header#banner nav ul li:focus{
+            border-bottom: 3px solid var(--color-secondary);
+        }
 
         /*
 
@@ -105,10 +106,10 @@
 
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                <ul class="nav-list">
+                    <li class="nav-btn">Services</li>
+                    <li class="nav-btn">About Us</li>
+                    <li class="nav-btn">Contact Us</li>
                 </ul>
             </nav>
         </header>

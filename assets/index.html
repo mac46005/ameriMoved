@@ -12,290 +12,137 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --color-primary: #649307;
-            --color-secondary: #a49628;
-            --color-card: rgb(228, 228, 48);
-            --color-nav: #494949;
+        body{
+            font-size: 16px;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            display: inline;
         }
 
-        body {
-            margin: 0;
+
+        .container{
+            width: 80%;
+            border: 1px solid greenyellow;
         }
 
-        img {
-            width: 100%;
-        }
-
-        /* Layout */
-        .container {
-            max-width: 80%;
-            margin: 0 auto;
-        }
-
-        .columns {
+        .columns{
             display: flex;
             flex-direction: column;
         }
-
-        .rows {
+        .rows{
             display: flex;
             flex-direction: row;
         }
 
-        .just-spBet {
+        .just-spBet{
             justify-content: space-between;
         }
-
-        .just-spEven {
+        .just-spEven{
             justify-content: space-evenly;
         }
-
-        .just-spArnd {
+        .just-spArnd{
             justify-content: space-around;
         }
 
-        .col-1 {
-            flex-basis: 24%;
+        col-1{
+            flex-basis: 25%;
         }
-
-        .col-2 {
-            flex-basis: 47%;
+        col-2{
+            flex-basis: 50%;
         }
-
-        .col-3 {
-            flex-basis: 73%;
+        col-3{
+            flex-basis: 75%;
         }
-
-        .col-4 {
-            flex-basis: 97%;
-        }
-        .flex-wrap{
-            flex-wrap: wrap;
+        col-4{
+            flex-basis: 100%;
         }
 
 
 
 
-        /* myStyles */
-
-
-        /*
-
-
-        START
-        BANNER / NAVIGATION
-
-
-        */
-        #mainHeader {
+        .mainContainer{
+            display: flex;
+            flex-direction: row;
             width: 100%;
-            height: 100vh;
-            background: var(--color-nav) url(./img/Banner.png);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
         }
-        
-        #mainHeader .banner{
-            position: relative;
-            height: 90%;
-        }
-        #mainHeader .banner .logo{
-            position: absolute;
+        .half{
             width: 50%;
-        }
-        #mainHeader .banner .mission{
-            background: rgba(241, 202, 63, 0.5);
-            width: 30%;
-            padding: 1em;
-            position: absolute;
-            bottom: 1%;
-            right: 1%;
-            border-top: 3px solid brown;
-            border-bottom: 3px solid brown;
-        }
-        
-        #mainHeader .navigation{
             position: relative;
-            height: 10%;
-            background: var(--color-nav);
-
         }
-        #mainHeader .navigation ul{
-            list-style: none;
-
+        .mainContent{
+            display: flex;
+            justify-content: center;
         }
-        #mainHeader .navigation ul li{
-            padding: 1em 1em;
-            display: inline-block;
+        .mainContent > div{
+            width: 80%;
         }
-
-        #mainHeader .navigation ul li a{
-            text-decoration: none;
-            color: white;
+        .mainContent img{
+            width: 100%
         }
-        #mainHeader .navigation ul li:hover{
-            color: var(--color-primary);
-            background: white;
+        .banner{
+            border: 1px solid lime;
+            height: 100vh;
+            position: relative;
+            background: url(../content/images/ps/lmtv_qrtTurn.png);
+            background-size: cover;
         }
-
-        /*
-        
-
-        END
-        BANNER / NAVIGATION
-
-
-        */
-
-
-
-
-
-
-
-
-
-        main{
-            background: var(--color-secondary)
-        }
-        main header{
-            padding: 1em 0;
-            background: var(--color-primary);
-            text-align: center;
-        }
-
-        div.card{
-            background: var(--color-card);
+        .banner nav{
+            position: absolute;
+            right: 0;
             padding: 1em;
-            border-radius: 1em;
-        }
-        div.card img{
-            width: 100%;
-        }
-
-
-
-
-
-
-
-
-
-        @media screen and (max-width: 680px){
             
+
         }
     </style>
-</head>
-
 <body>
-    <header id="mainHeader" class="columns just-spBet">
-        <div class="banner">
-            <div class="logo">
-                <img src="./img/AmeriMove_Logo.png" alt="AmeriMove">
-            </div>
-            <div class="mission">
-                <h2>Ready for action, anytime, worldwide!</h2>
-                <p>
-                    Many moving services offered!
-                </p>
-                <p><a href="#">Our Services</a></p>
-            </div>
-        </div>
-
-
-
-
-        <div class="navigation">
-            <nav class="container">
-                <ul>
-                    <li><a href="#aboutUs">About Us</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#ContactUs">ContactUs</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
-
-    <main>
-        <div class="container">
-            <section id="aboutUs">
-                <header>
-                    <h2>About Us</h2>
-                </header>
-                <div class="columns">
-                    <div>
+    <div class="mainContainer">
+        <main class="half">
+            <div class="mainContent">
+                <div class="columns" style="justify-content: center;">
+                    <p class="logo">
                         <img src="./img/AmeriMove_Logo.png" alt="">
+                    </p>
+                    <h2>
+                        Our Mission
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, reprehenderit. Officiis ullam quis ea necessitatibus rem quisquam unde non quae? Quidem, laudantium architecto! Culpa nihil accusantium molestias tempore. Deserunt, quisquam!
+                    </p>
+                    <hr>
+                    <h2>
+                        What we do
+                    </h2>
+                    <p>
+                        We offer a variety of services
+                    </p>
+                    <div class="services">
+
                     </div>
-                    <div>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repellat perferendis consequatur odio. Explicabo repellat ab quaerat aliquid harum similique. Quasi, esse quaerat necessitatibus quisquam hic doloribus repellendus ducimus at?
-                        </p>
-                    </div>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-            </section>
-
-            <section id="Services">
-                <header>
-                    <h2>Services</h2>
-                </header>
-                <p>
-                    Find the right services for the job.
-                </p>
-                <p>
-                    AmeriMove offers a wide variety of moving services. We are capable of adapting to your needs to get the job done. Below is a list of services we offer.
-                </p>
-                <div class="rows just-spArnd">
-                    <div class="card col-2">
-                        <figure>
-                            <img src="./img/famPackVeh.jpg" alt="LMTV">
-                            <caption><acronym title="Light Medium Tactical Vehicle">LMTV</acronym></caption>
-                        </figure>
-                        <h3>Single Family Package</h3>
-                        <p>Economic moving package for single famailies.</p>
-                    </div>
-                    <div class="card col-2">
-                        <figure>
-                            <img src="./img/bus.jpg" alt="Military Bus">
-                            <caption>
-                                Personnel Carrier
-                            </caption>
-                            <h3>Bus Loads</h3>
-                            <p>
-                                Not only can we move items we can also move bus loads of people.
-                            </p>
-
-                        </figure>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </main>
 
 
-            <section id="ContactUs">
-                <header>
-                    <h2>Contact Us</h2>
-                </header>
-                <p>
-                    Please fill out the form below and we will contact you as soon as possible.
-                </p>
-                <form action="">
-                    <label for="">Full Name: <input type="text" name="fullName" id="" placeholder="Bob Smith"></label>
-                    <label for="">Phonenumber: <input type="tel" name="phoneNumber" id="" placeholder="333-333-3333"></label>
-                    <label for="">Email: <input type="email" name="email" id="" placeholder="mymail@mail.com"></label>
-                    
-                </form>
-            </section>
-        </div>
-    </main>
 
-    <footer>
-        <div class="container">
 
-        </div>
-    </footer>
+
+
+        <header class="half">
+
+            <div class="banner">
+                <nav>
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
 </body>
-
 </html>

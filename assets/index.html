@@ -69,11 +69,12 @@
             color: var(--color-secondary);
             font-weight: 900;
         }
-        header#banner nav ul li .selected{
+        header#banner nav ul li.selected{
             border-bottom: 3px solid var(--color-secondary);
         }
         header#banner nav ul li:hover, header#banner nav ul li:focus{
             border-bottom: 3px solid var(--color-secondary);
+            cursor: pointer;
         }
 
         /*
@@ -107,7 +108,7 @@
             </div>
             <nav>
                 <ul class="nav-list">
-                    <li class="nav-btn">Services</li>
+                    <li class="nav-btn selected">Services</li>
                     <li class="nav-btn">About Us</li>
                     <li class="nav-btn">Contact Us</li>
                 </ul>
@@ -138,6 +139,7 @@
 
 
     </div>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>

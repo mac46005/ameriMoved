@@ -7,12 +7,8 @@ var navBtns = document.querySelectorAll(".nav-btn");
 function pageTransition(){
     for (let i = 0; i < navBtns.length; i++) {
         navBtns[i].addEventListener('click',function(){
-            var currentBtn = document.querySelectorAll('.selected');
-            currentBtn[0].classList.replace('selected','');
-            this.className += 'selected';
-        })
-        
+            navBtns[i].className += ' selected';
+        });        
     }
 }
-
 pageTransition();

@@ -7,20 +7,18 @@ var navBtns = document.querySelectorAll(".nav-btn");
 function pageTransition(){
     for (let i = 0; i < navBtns.length; i++) {
         navBtns[i].addEventListener('click',function(){
+            // changes current btn to not selected
+            // and changes the newly clicked button to selected
+            
             var currentBtn = document.querySelectorAll('.selected');
             var arr = ['selected'];
             currentBtn[0].classList.remove(arr);
             navBtns[i].className += ' selected';
+
+
         });
-        ConstantSourceNode.addEventListener('click',(e) => {
-            const id = e.target.dataset.id;
-
-            console.log(id);
-
-            if(id){
-                // change views
-            }
-        })
     }
+
+
 }
 pageTransition();

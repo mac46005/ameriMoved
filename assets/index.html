@@ -61,6 +61,7 @@
         header#banner nav {
             position: absolute;
             right: 0;
+            padding: 1em .5em;
         }
 
         header#banner nav ul {
@@ -70,6 +71,7 @@
         header#banner nav ul li {
             text-decoration: none;
             color: var(--color-secondary);
+            display: inline-block;
             font-weight: 900;
         }
 
@@ -90,11 +92,12 @@
         */
         .main-content {
             position: relative;
-            width: fit-content;
+            width: 50%;
         }
 
         .content-item {
             position: absolute;
+            
         }
 
         @keyframes appear {
@@ -161,19 +164,34 @@
 
 
 
-        <main id="main-content">
+        <main class="main-content">
 
             <div id="home" class="content-item active" style="color: green;">
-                <h1>home</h1>
+                <header>
+                    <h2>logo</h2>
+                </header>
+                <section>
+                    <h3>section</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut excepturi deserunt accusamus eveniet repudiandae voluptatem voluptatibus quibusdam rerum magnam!
+                    </p>
+
+                </section>
             </div>
             <div id="services" class="content-item hidden" style="color: red;">
-                <h1>services</h1>
+                <header>
+                    <h2>our services</h2>
+                </header>
             </div>
             <div id="about" class="content-item hidden" style="color: purple">
-                <h1>about</h1>
+                <header>
+                    <h2>about us</h2>
+                </header>
             </div>
             <div id="contact" class="content-item hidden" style="color: blue;">
-                <h1>contact</h1>
+                <header>
+                    <h2>contact us</h2>
+                </header>
             </div>
         </main>
 
@@ -183,6 +201,9 @@
 
 
     </div>
+    <footer>
+
+    </footer>
     <script src="./script/index.js"></script>
 </body>
 

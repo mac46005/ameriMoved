@@ -24,9 +24,28 @@ function pageTransition(){
         // var id = e.target.dataset.id;
         // console.log(id);
         console.log(e.target.dataset.id);
+
+        // gets the data-id value from the list
+        var id = e.target.dataset.id;
+
+        // if data-id exists...
+        if(id){
+            var arr = ['active'];
+            var hidden = ['hidden'];
+
+            // selects the active div
+            var currentSection = document.querySelector('.active');
+            //removes the active class from the active div and adds the hidden class to the div
+            currentSection.classList.remove(arr);
+            currentSection.className += ' hidden'
+
+            // from the selected option grab the div with the data-id
+            var newSection = document.getElementById(id);
+            // removes the hidden class from div and adds the active class to the newly selected option
+            newSection.classList.remove(hidden);
+            newSection.className += ' active';              
+        }
     });
-
-
 
 }
 pageTransition();

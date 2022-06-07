@@ -52,27 +52,33 @@
             width: 50%;
             position: relative;
         }
-        header#banner .b-img{
+
+        header#banner .b-img {
             position: absolute;
-            
+
         }
-        header#banner nav{
+
+        header#banner nav {
             position: absolute;
             right: 0;
         }
+
         header#banner nav ul {
             list-style: none;
         }
 
-        header#banner nav ul li{
+        header#banner nav ul li {
             text-decoration: none;
             color: var(--color-secondary);
             font-weight: 900;
         }
-        header#banner nav ul li.selected{
+
+        header#banner nav ul li.selected {
             border-bottom: 3px solid var(--color-secondary);
         }
-        header#banner nav ul li:hover, header#banner nav ul li:focus{
+
+        header#banner nav ul li:hover,
+        header#banner nav ul li:focus {
             border-bottom: 3px solid var(--color-secondary);
             cursor: pointer;
         }
@@ -94,18 +100,17 @@
         .hidden {
             display: none;
         }
-        .active{
+
+        .active {
             display: block;
         }
-
-
     </style>
 
 <body class="main-body">
     <div class="main-container">
         <header id="banner">
             <img class="b-img" src="../content/images/ps/lmtv_qrtTurn.png" alt="">
-            <div class="logo" >
+            <div class="logo">
 
             </div>
             <nav>
@@ -121,20 +126,20 @@
 
 
         <main id="main-content">
-            
-            <div id="home" class="content-item" style="color: green;">
+
+            <div id="home" class="content-item active" style="color: green;">
                 <h1>home</h1>
             </div>
-            <div id="services" class="content-item" style="color: red;">
+            <div id="services" class="content-item hidden" style="color: red;">
                 <h1>services</h1>
             </div>
-            <div id="about" class="content-item" style="color: purple">
+            <div id="about" class="content-item hidden" style="color: purple">
                 <h1>about</h1>
             </div>
-            <div id="contact" class="content-item" style="color: blue;">
+            <div id="contact" class="content-item hidden" style="color: blue;">
                 <h1>contact</h1>
             </div>
-            </section>
+        </main>
 
 
 

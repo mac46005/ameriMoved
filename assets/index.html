@@ -26,13 +26,33 @@
             height: 100vh;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 2rem;
+            margin-bottom: .1rem;
+            text-align: center;
+            padding: 1rem 1rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            padding: 1em 1em;
+        }
+
+
+
+
 
 
 
 
 
         .main-container {
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
             display: flex;
             flex-direction: row;
@@ -97,8 +117,16 @@
 
         .content-item {
             position: absolute;
-            
+
         }
+
+        .content-item p {
+            max-width: 80%;
+            margin: 0 auto;
+            text-indent: 1rem;
+        }
+
+
 
         @keyframes appear {
             0% {
@@ -108,7 +136,7 @@
 
             100% {
                 opacity: 1;
-                
+
             }
         }
 
@@ -143,15 +171,31 @@
             animation-fill-mode: forwards;
 
         }
+
+        img#homeLogo{
+            width: 100%;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 1rem;
+            border-radius: 1em;
+            text-decoration: none;
+            color: black;
+        }
+        .btn-info{
+            background: orange;
+        }
+        .btn-info:hover,.btn-info:focus{
+            background-color: yellow;
+        }
     </style>
 
 <body class="main-body">
     <div class="main-container">
         <header id="banner">
             <img class="b-img" src="../content/images/ps/lmtv_qrtTurn.png" alt="">
-            <div class="logo">
-
-            </div>
             <nav>
                 <ul class="nav-list">
                     <li class="nav-btn selected" data-id="home">Home</li>
@@ -163,32 +207,34 @@
         </header>
 
 
-
         <main class="main-content">
 
-            <div id="home" class="content-item active" style="color: green;">
+            <div id="home" class="content-item active">
                 <header>
-                    <h2>logo</h2>
+                    <h2>
+                        <img id="homeLogo" src="./img/AmeriMove_Logo.png" alt="">
+                    </h2>
                 </header>
                 <section>
-                    <h3>section</h3>
+                    <h3>Our Mission</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut excepturi deserunt accusamus eveniet repudiandae voluptatem voluptatibus quibusdam rerum magnam!
+                        We are proud to serve our country. Offering top moving services all over the world.
                     </p>
+                    <a class="btn btn-info" href="#">Get a quote</a>
 
                 </section>
             </div>
-            <div id="services" class="content-item hidden" style="color: red;">
+            <div id="services" class="content-item hidden">
                 <header>
                     <h2>our services</h2>
                 </header>
             </div>
-            <div id="about" class="content-item hidden" style="color: purple">
+            <div id="about" class="content-item hidden">
                 <header>
                     <h2>about us</h2>
                 </header>
             </div>
-            <div id="contact" class="content-item hidden" style="color: blue;">
+            <div id="contact" class="content-item hidden">
                 <header>
                     <h2>contact us</h2>
                 </header>
@@ -201,9 +247,6 @@
 
 
     </div>
-    <footer>
-
-    </footer>
     <script src="./script/index.js"></script>
 </body>
 

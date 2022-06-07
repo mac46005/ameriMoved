@@ -199,6 +199,16 @@
         .btn-info:hover,.btn-info:focus{
             background-color: yellow;
         }
+
+
+
+
+
+        form{
+            background: rgb(255, 230, 0,.3);
+            padding: 1em;
+            border-radius: 3px;
+        }
     </style>
 
 <body class="main-body">
@@ -210,7 +220,7 @@
                     <li class="nav-btn selected" data-id="home">Home</li>
                     <li class="nav-btn" data-id="services">Services</li>
                     <li class="nav-btn" data-id="about">About Us</li>
-                    <li class="nav-btn" data-id="contact">Contact Us</li>
+                <li class="nav-btn" data-id="quote">Quote</li>
                 </ul>
             </nav>
         </header>
@@ -248,6 +258,7 @@
                             <li>Local Moves</li>
                             <li>Interstate Moves</li>
                             <li>International Moves</li>
+                            <li>Busing Service</li>
                         </ul>
                     </div>
                 </section>
@@ -257,17 +268,17 @@
                     <h2>about us</h2>
                 </header>
             </div>
-            <div id="contact" class="content-item hidden">
+            <div id="quote" class="content-item hidden">
                 <header>
-                    <h2>contact us</h2>
+                    <h2>Quote</h2>
                 </header>
                 <form action="">
                     <h3>Get a free moving quote in minutes</h3>
-                    <label for="from">Moving From</label>
-                    <input type="text" name="from" id="from">
-                    <label for="to">Moving To</label>
-                    <input type="text" name="to" id="to">
-
+                    <label for="from">Moving From</label><br>
+                    <input type="text" name="from" id="from"><br>
+                    <label for="to">Moving To</label><br>
+                    <input type="text" name="to" id="to"><br>
+                    <input type="submit" value="Next Step">
                 </form>
             </div>
         </main>

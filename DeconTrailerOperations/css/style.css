@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #efefef;
+    --color-success: green;
+    --color-warning: orange;
+    --color-danger: red;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg: #c5c5c5;
+    --color-bg1: #efefefc0;
+    --color-bg2: #828282;
+}

@@ -98,3 +98,48 @@ img{
     border-color: var(--color-white);
 
 }
+
+.btn-primary{
+    background: var(--color-danger-variant);
+    color: var(--color-white);
+}
+
+
+/* - NAVBAR */
+nav{
+    background: red;
+    width: 100vw;
+    height: 5rem;  /* ! 5 * 16px */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.nav__container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    display: none;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.nav__menu a{
+    font-size: .9rem;;
+}
+
+.nav__menu a:hover{
+    color: var(--color-bg2);
+}
+
+
+

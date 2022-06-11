@@ -8,13 +8,18 @@
 }
 
 :root{
-    --color-primary: #efefef;
+    --color-primary: #000000;
     --color-success: green;
     --color-warning: orange;
     --color-danger: red;
     --color-white: #fff;
     --color-black: #000;
     --color-bg: #c5c5c5;
-    --color-bg1: #efefefc0;
-    --color-bg2: #828282;
+    --color-bg1: #2600ffc0;
+    --color-bg2: #2100c4;
+}
+
+body{
+    background: #efefef;
+    font-size: 16px;
 }

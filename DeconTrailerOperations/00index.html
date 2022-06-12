@@ -8,34 +8,78 @@
     <style>
 
         /*
+        flex
+        justify-content: aligns items horizontally
+        align-items: aligns items vertically
+
+
         grid-template-columns: with this you can define size of each columns in the grid
 
+        grid-template-rows: with this you can define size of each rows in the grid
+
+        grid-template-areas: with this you can specify the different areas within the grid layout
+
+        clamp(min,preferred,max);
+
         
+
+
         */
         .container{
             display: grid;
             height: 100vh;
+            grid-template-areas: 
+            "nav nav nav nav"
+            "main main main sidebar"
+            "content1 content2 content3 sidebar"
+            "footer footer footer footer";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: .2fr 1.5fr 1.2fr .5fr;
+            grid-gap: 0.2rem;
         }
         nav{
             background: rgba(23,23,23,.5);
+            grid-area: nav;
         }
         main{
             background: rgba(43,23,133,.6);
+            grid-area: main;
         }
         #sidebar{
             background: rgba(255,100,0,.3);
+            grid-area: sidebar;
         }
         #content1{
             background: rgba(0,255,0,.3);
+            grid-area: content1;
         }
         #content2{
             background: rgba(0,0,255,.4);
+            grid-area: content2;
         }
         #content3{
             background: rgba(100,20,34,.4);
+            grid-area: content3;
         }
         footer{
             background: rgba(200,0,100,.6);
+            grid-area: footer;
+        }
+
+        @media only screen and (max-width: 550px){
+            .container{
+                grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: .4fr .4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+            }
+            
         }
     </style>
 </head>

@@ -21,11 +21,11 @@
 
         clamp(min,preferred,max);
 
-        
+
 
 
         */
-        .container{
+        /* .container{
             display: grid;
             height: 100vh;
             grid-template-areas: 
@@ -80,11 +80,67 @@
             grid-template-rows: .4fr .4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
             }
             
+        } */
+        *{
+            padding:0;
+            margin: 0;
+            outline: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        :root{
+            --color-primary: blue;
+            --color-danger: red;
+            --color-warning: orange;
+            --color-success: limegreen;
+            --color-white: #fff;
+            --color-black: #000;
+            --color-bg: #efefef;
+            --color-bg1: blue;
+            --color-bg2: blue;
+
+            --container-sz-lg: 80%;
+            --container-sz-md: 85%;
+            --container-sz-sm: 90%;
+
+            --transition: all 1s ease-in-out;
+        }
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            grid-template-rows: .1fr 1fr;
+            grid-template-areas: 
+            "nav header"
+            "nav main";
+        }
+
+        nav{
+            grid-area: nav;
+            background-color:blue;
+        }
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav>
+            nav
+        </nav>
+        <header>
+            header
+        </header>
+        <main>
+            main
+        </main>
+    </div>
+    <!-- <div class="container">
         <nav>Navbar</nav>
         <main>Main</main>
         <div id="sidebar">Sidebar</div>
@@ -92,6 +148,6 @@
         <div id="content2">Content2</div>
         <div id="content3">Content3</div>
         <footer>Footer</footer>
-    </div>
+    </div> -->
 </body>
 </html>

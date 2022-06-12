@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
+        /* .container{
             padding: 2rem;
 
         }
@@ -30,14 +30,44 @@
 
         .flex > .cell:nth-child(2){
             flex-grow: 2;
+        } */
+
+
+        /* Letting your content shape your layout */
+        .container{
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .cell{
+            background: #bddab3;
+            padding: 3rem;
+        }
+
+        /* The layout shapes the content (use grid) */
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
         }
     </style>
 </head>
 <body>
-    <div class="container flex">
+    <!-- <div class="container flex">
         <div class="cell">1</div>
         <div class="cell">2</div>
         <div class="cell">3</div>
+    </div> -->
+    <div class="container">
+        <div class="cell">
+            This is some very long content which will most likely span on a few lines, depending on the size of the parent and the available space.
+        </div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
     </div>
 </body>
 </html>

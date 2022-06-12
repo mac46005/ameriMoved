@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechDecon Guide</title>
+    <style>
+
+        /*
+        grid-template-columns: with this you can define size of each columns in the grid
+
+        
+        */
+        .container{
+            display: grid;
+            height: 100vh;
+        }
+        nav{
+            background: rgba(23,23,23,.5);
+        }
+        main{
+            background: rgba(43,23,133,.6);
+        }
+        #sidebar{
+            background: rgba(255,100,0,.3);
+        }
+        #content1{
+            background: rgba(0,255,0,.3);
+        }
+        #content2{
+            background: rgba(0,0,255,.4);
+        }
+        #content3{
+            background: rgba(100,20,34,.4);
+        }
+        footer{
+            background: rgba(200,0,100,.6);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <nav>Navbar</nav>
+        <main>Main</main>
+        <div id="sidebar">Sidebar</div>
+        <div id="content1">Content1</div>
+        <div id="content2">Content2</div>
+        <div id="content3">Content3</div>
+        <footer>Footer</footer>
+    </div>
 </body>
 </html>

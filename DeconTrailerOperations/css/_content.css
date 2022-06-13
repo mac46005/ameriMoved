@@ -13,11 +13,15 @@ div.content-container{
 }
 .topic{
     grid-area: topic;
+    align-self: center;
+    justify-self: center;
+    font-size: 4rem;
 }
-
 .message{
     grid-area: message;
-    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
 }
 
 

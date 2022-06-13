@@ -1,0 +1,42 @@
+div.content-container{
+    grid-area: main;
+    display: grid;
+}
+
+
+#preInformation{
+    grid-template-areas: 
+    "topic"
+    "illustration"
+    "message";
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-items: center;
+}
+.topic{
+    grid-area: topic;
+}
+.illustration{
+    grid-area: illustration;
+}
+.message{
+    grid-area: message;
+}
+
+
+
+
+#information{
+    grid-template-areas: 
+    "heading"
+    "illustration content";
+}
+
+.heading{
+
+}
+.illustration{
+
+}
+.content{
+
+}

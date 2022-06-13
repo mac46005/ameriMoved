@@ -1,0 +1,26 @@
+nav{
+    grid-area: nav;
+    background-color: var(--color-bg1);
+}
+
+.nav-container a{
+    color: var(--color-primary);
+}
+.nav-container #logo{
+    font-weight: 900;
+}
+.nav-container .nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.nav-container .nav-menu ul.nav-subMenu{
+    margin-left: 1rem;
+    list-style-type: circle;
+}
+#startUp_subMenu{
+    display: none;
+}
+#startUp_mainNavItem:focus-within + #startUp_subMenu{
+    display: block;
+}

@@ -1,6 +1,7 @@
 div.content-container{
     grid-area: main;
     display: grid;
+
 }
 
 
@@ -9,17 +10,21 @@ div.content-container{
     "topic"
     "illustration"
     "message";
-    grid-template-rows: .2fr .8fr .2fr;
-    justify-items: center;
+    grid-template-rows: 10% 50% 40%;
 }
 .topic{
     grid-area: topic;
 }
 .illustration{
     grid-area: illustration;
+    background: url(../images/stock/IMG_20220609_151823544_HDR.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .message{
     grid-area: message;
+    text-align: center;
 }
 
 

@@ -1,3 +1,7 @@
-.illustration{
-    width: 50%;
+
+#preInformation{
+    grid-template-areas: 
+    "illustration"
+    "message";
+    grid-template-rows: 70% 30%;
 }

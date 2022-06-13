@@ -81,6 +81,10 @@
             }
             
         } */
+
+
+
+
         *{
             padding:0;
             margin: 0;
@@ -90,7 +94,7 @@
             box-sizing: border-box;
         }
         :root{
-            --color-primary: blue;
+            --color-primary: rgb(243, 255, 11);
             --color-danger: red;
             --color-warning: orange;
             --color-success: limegreen;
@@ -106,7 +110,28 @@
 
             --transition: all 1s ease-in-out;
         }
-        .container{
+
+        body{
+            background-color: var(--color-bg);
+            font-size: 16px;
+
+        }
+        h1,h2,h3,h4,h5,h6{
+            line-height: 1.2rem;
+        }
+        h1{
+            line-height: 2.2rem;
+        }
+        h2{
+            line-height: 1.8rem;
+        }
+        h3{
+            font-size: 1.6rem;
+        }
+        h4{
+            font-size: 1.4rem;
+        }
+        .main-container{
             height: 100vh;
             display: grid;
             grid-template-columns: 2fr 8fr;
@@ -118,28 +143,94 @@
 
         nav{
             grid-area: nav;
-            background-color:blue;
+            background-color: var(--color-bg1);
         }
+        .container{
+            width: 90%;
+        }
+        .nav-container a{
+            color: var(--color-primary);
+        }
+        .nav-container #logo{
+            font-weight: 900;
+        }
+        .nav-container .nav-menu{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .nav-container .nav-menu ul.nav-sub-menu{
+            display: none;
+            margin-left: 1rem;
+            list-style-type: circle;
+        }
+        .nav-menu:focus-within > .nav-sub-menu{
+            display: block;
+        }
+        
         header{
             grid-area: header;
         }
-        main{
+        div.content{
             grid-area: main;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         <nav>
-            nav
+            <div class="container nav-container">
+                <a id="logo" href="">Decon Trailer Operations Manual</a>
+                <ul class="nav-menu">
+                    <li>
+                        <a id="startUp_mainNavItem" href="#">Start Up</a>
+                        <ul id="startUp_subMenu" class="nav-sub-menu">
+                            <li><a href="#">Location Selection</a></li>
+                            <li><a href="#">Powering the Trailer</a></li>
+                            <li><a href="#">Set Up Trailer</a></li>
+                            <li><a href="#">Flushing Glycol</a></li>
+                            <li><a href="#">Purging Air</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="deconOps_mainNavItem" href="#">Decon Operations</a>
+                        <ul id="deconOps_subMenu" class="nav-sub-item">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="tearDwn_mainNavItem" href="#">Tear Down</a>
+                        <ul id="tearDwn_subMenu" class="nav-sub-menu">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="trans_mainNavItem" href="#">Transportations</a>
+                        <ul class="nav-sub-menu">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <header>
-            header
+            <h1>NG-C130 Gen3 Mass Decon Trailer Operations Manual</h1>
         </header>
-        <main>
-            main
-        </main>
+        <div class="content">
+            content
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
     <!-- <div class="container">
         <nav>Navbar</nav>
         <main>Main</main>

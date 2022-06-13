@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /* .container{
-            padding: 2rem;
-
-        }
-        .cell{
-            background: #bddab3;
-            padding: 1rem;
-        }
-        .grid{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 1rem;
-        }
-
-        .flex{
-            display: flex;
-            gap: 1rem;
-        }
-        .flex > .cell{
-            flex-grow: 1;
-        }
-
-        .flex > .cell:nth-child(2){
-            flex-grow: 2;
-        } */
-
-
-        /* Letting your content shape your layout */
-        .container{
-            padding: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .cell{
-            background: #bddab3;
-            padding: 3rem;
-        }
-
-        /* The layout shapes the content (use grid) */
-        .container{
-            display: grid;
-            grid-gap: 1rem;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/_nav.css">
+    <link rel="stylesheet" href="./css/_header.css">
+    <link rel="stylesheet" href="./css/_content.css">
+    <link rel="stylesheet" href="./css/_content_controller.css">
 </head>
+
 <body>
-    <!-- <div class="container flex">
-        <div class="cell">1</div>
-        <div class="cell">2</div>
-        <div class="cell">3</div>
-    </div> -->
-    <div class="container">
-        <div class="cell">
-            This is some very long content which will most likely span on a few lines, depending on the size of the parent and the available space.
+    <div class="main-container">
+        <nav>
+            <div class="container nav-container">
+                <a id="logo" href="./00index.html">Decon Trailer Operations Manual</a>
+                <ul class="nav-menu">
+                    <li>
+                        <a id="startUp_mainNavItem" href="#">Start Up</a>
+                        <ul id="startUp_subMenu" class="nav-subMenu">
+                            <li><a href="#">Location Selection</a></li>
+                            <li><a href="#">Powering the Trailer</a></li>
+                            <li><a href="#">Set Up Trailer</a></li>
+                            <li><a href="#">Flushing Glycol</a></li>
+                            <li><a href="#">Purging Air</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="deconOps_mainNavItem" href="#">Decon Operations</a>
+                        <ul id="deconOps_subMenu" class="nav-subMenu">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="tearDwn_mainNavItem" href="#">Tear Down</a>
+                        <ul id="tearDwn_subMenu" class="nav-subMenu">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="trans_mainNavItem" href="#">Transportations</a>
+                        <ul class="nav-subMenu">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header>
+            <h1>NG-C130 Gen3 Mass Decon Trailer Operations Manual</h1>
+            <h2>Start Up</h2>
+        </header>
+
+        <div id="preInformation" class="container content-container">
+            
+        </div><!-- END #preInformation .content-contianer -->
+
+        <div class="container content-controller-container">
+            <div class="left">
+                <a href="./00index.html" class="btn">Previous</a>
+            </div><!-- END .left -->
+            <div class="right">
+                <a class="btn" href="./01startup.html">Next</a>
+            </div><!-- END .right -->
         </div>
-        <div class="cell">2</div>
-        <div class="cell">3</div>
-        <div class="cell">4</div>
-        <div class="cell">5</div>
+        <!--END .content-controller-container -->
     </div>
+
 </body>
+
 </html>

@@ -5,6 +5,13 @@
     "message";
     grid-template-rows: 70% 30%;
 }
+.illustration{
+    grid-area: illustration;
+    background: url(../images/stock/IMG_20220609_151823544_HDR.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .message{
     align-self: center;
 }
